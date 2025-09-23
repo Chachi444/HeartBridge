@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
