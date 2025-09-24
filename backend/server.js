@@ -93,6 +93,44 @@ app.get('/', (req, res) => {
   });
 });
 
+// Secret Admin Dashboard Route
+app.get('/admin/dashboard/secret-hb-2025', async (req, res) => {
+  try {
+    // Get system stats
+    const userCount = await mongoose.connection.db.collection('users').countDocuments();
+    const requestCount = await mongoose.connection.db.collection('requests').countDocuments();
+    
+    res.status(200).json({
+      message: '👑 HeartBridge Admin Dashboard - Top Secret Access',
+      status: 'authenticated',
+      timestamp: new Date().toISOString(),
+      systemStats: {
+        totalUsers: userCount,
+        totalRequests: requestCount,
+        serverUptime: process.uptime(),
+        memoryUsage: process.memoryUsage(),
+        nodeVersion: process.version,
+        environment: process.env.NODE_ENV || 'development'
+      },
+      adminActions: {
+        viewAllUsers: '/admin/users',
+        viewAllRequests: '/admin/requests',
+        systemHealth: '/admin/health',
+        clearCache: '/admin/cache/clear'
+      },
+      security: {
+        lastAccessed: new Date().toISOString(),
+        accessLevel: 'SUPER_ADMIN'
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: 'Admin dashboard temporarily unavailable',
+      error: error.message
+    });
+  }
+});
 
 app.use(errorHandler);
 
