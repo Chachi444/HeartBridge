@@ -263,41 +263,6 @@ const AuthLanding = ({ onLogin, onRegister }) => {
                 </div>
               </div>
             </div>
-
-            {/* Admin Card */}
-            <div className="role-card admin-card">
-              <div className="card-image">
-                <img src={volunteerImage1} alt="Community administrator" />
-                <div className="card-overlay">
-                  <span className="card-icon">🔧</span>
-                </div>
-              </div>
-              <div className="card-content">
-                <h3>I Want to Manage the Community</h3>
-                <p>Oversee and moderate the HeartBridge community, approve requests, and ensure a safe environment for all members.</p>
-                <ul className="card-features">
-                  <li>🔍 Review and approve requests</li>
-                  <li>👥 Manage user accounts</li>
-                  <li>📊 Monitor community activity</li>
-                  <li>🛡️ Ensure community safety</li>
-                  <li>📈 Track platform growth</li>
-                </ul>
-                <div className="card-actions">
-                  <button 
-                    className="action-button primary admin-button"
-                    onClick={() => handleRoleSelection('admin', 'signup')}
-                  >
-                    🔧 Become an Admin
-                  </button>
-                  <button 
-                    className="action-button secondary"
-                    onClick={() => handleRoleSelection('admin', 'signin')}
-                  >
-                    🔑 Sign In
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="community-stats">
