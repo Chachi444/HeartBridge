@@ -8,12 +8,12 @@ const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 // Import routes
-const requestRoutes = require('./routes/requests');
-const userRoutes = require('./routes/users');
-const uploadRoutes = require('./routes/upload');
+const requestRoutes = require('./src/routes/requests');
+const userRoutes = require('./src/routes/users');
+const uploadRoutes = require('./src/routes/upload');
 
 // Import middleware
-const errorHandler = require('./middleware/errorHandler');
+const errorHandler = require('./src/middleware/errorHandler');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
