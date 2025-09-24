@@ -77,6 +77,22 @@ app.get('/api', (req, res) => {
   });
 });
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: '💕 Welcome to HeartBridge API - Connecting hearts, building community!',
+    version: '1.0.0',
+    status: 'running',
+    endpoints: {
+      api: '/api',
+      requests: '/api/requests',
+      users: '/api/users',
+      upload: '/api/upload',
+      health: '/api/health'
+    }
+  });
+});
+
 
 app.use(errorHandler);
 
