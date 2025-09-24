@@ -77,7 +77,7 @@ app.get('/api', (req, res) => {
   });
 });
 
-// Error handling middleware (should be last)
+
 app.use(errorHandler);
 
 // Handle undefined routes
