@@ -519,6 +519,12 @@ function AppContent({
 
       <main className="main-content">
         <Routes>
+          {/* Secret Admin Dashboard Route - MUST BE FIRST */}
+          <Route 
+            path="/admin/secret-hb-2025" 
+            element={<SecretAdminDashboard />} 
+          />
+          
           {/* Public routes */}
           <Route 
             path="/login" 
@@ -547,12 +553,6 @@ function AppContent({
                 />
               )
             } 
-          />
-          
-          {/* Secret Admin Dashboard Route */}
-          <Route 
-            path="/admin/secret-hb-2025" 
-            element={<SecretAdminDashboard />} 
           />
           
           {/* Protected role-specific routes */}
