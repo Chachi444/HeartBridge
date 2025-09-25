@@ -9,6 +9,7 @@ import ElderlyDashboard from './components/ElderlyDashboard';
 import Navigation from './components/Navigation';
 import AuthLanding from './components/AuthLanding';
 import SecretAdmin from './components/SecretAdmin';
+import SecretAdminDashboard from './pages/SecretAdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Import elderly photos from assets
@@ -546,6 +547,12 @@ function AppContent({
                 />
               )
             } 
+          />
+          
+          {/* Secret Admin Dashboard Route */}
+          <Route 
+            path="/admin/secret-hb-2025" 
+            element={<SecretAdminDashboard />} 
           />
           
           {/* Protected role-specific routes */}
