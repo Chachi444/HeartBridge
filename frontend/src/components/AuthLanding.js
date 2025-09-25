@@ -89,7 +89,7 @@ const AuthLanding = ({ onLogin, onRegister }) => {
       }));
     }
     
-    // Clear error when user starts typing
+    
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,

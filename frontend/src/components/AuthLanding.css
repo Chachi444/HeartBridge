@@ -59,23 +59,27 @@
 
 .role-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 60px;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .role-card {
-  background: white;
-  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(233, 30, 99, 0.3);
-  transition: all 0.4s ease;
-  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%; /* Ensure equal heights */
 }
 
 .role-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(233, 30, 99, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
@@ -120,7 +124,10 @@
 }
 
 .card-content {
-  padding: 30px;
+  padding: 2rem;
+  flex-grow: 1; /* Allow content to expand */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content h3 {
@@ -156,9 +163,10 @@
 }
 
 .card-actions {
+  margin-top: auto; /* Push buttons to bottom */
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .action-button {
